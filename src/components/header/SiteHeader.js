@@ -14,7 +14,6 @@ import { CATEGORIES, DROPDOWN_MENUS, NAV, PORTALS, REGIONS, ICONS, SHAPES } from
 import "./header.css";
 
 const NAVY = "#002F7A";
-const BLUE = "#0066EE";
 
 /* ---------- small pieces ---------- */
 function Thumb({ shape, image, alt }) {

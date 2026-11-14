@@ -9,7 +9,6 @@ import SubcategoryShowcaseLayout from "./components/SubcategoryShowcaseLayout";
 
 // All 17 Dedicated Static Subcategory Pages imported without needing a separate subfolders setup
 import {
-  ManholesPage,
   UtilityVaultsPage,
   HandholesPage,
   TrenchSystemsPage,
