@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap");
+
+/* Solid colors only: no gradients */
+:root {
+  --navy: #002f7a;      /* site dark blue */
+  --brand: #0066ee;     /* site bright blue */
+  --red: #d02f44;       /* USA flag red (same as the flag icon) */
+  --ink: #0b1b3a;
+  --mute: #5b6b8c;
+  --line: #d6e3fa;
+  --tint: #eef4ff;      /* very light blue for hover backgrounds */
+  --tint-2: #e1ecff;
+}
+
+body {
+  font-family: "Archivo", system-ui, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+}
+
+/* Top utility bar */
+.peg-topbar { background-color: var(--navy); }
+
+/* Main nav links */
+.peg-nav {
+  color: var(--brand);
+  border-top: 3px solid transparent;
+  background-color: transparent;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+}
+.peg-nav:hover {
+  color: var(--navy);
+  background-color: var(--tint);
+  border-top-color: var(--brand);
+}
+.peg-nav[data-open="true"] {
+  color: var(--navy);
+  background-color: var(--tint-2);
+  border-top-color: var(--red);
+}
+
+/* Button (Access Vault, Menu): solid navy, bright blue on hover */
+.peg-cta {
+  background-color: var(--navy);
+  transition: background-color 0.15s, transform 0.15s;
+}
+.peg-cta:hover {
+  background-color: var(--brand);
+  transform: translateY(-1px);
+}
+
+/* Solid navy panels (mega-menu CTA, dropdown intro box) */
+.peg-aside { background-color: var(--navy); }
+
+/* Light blue thumbnail background */
+.peg-thumb-bg { background-color: var(--tint-2); }
+
+/* Subcategory pane slides in each time the active category changes */
+.pane-in { animation: paneIn 0.22s ease; }
+@keyframes paneIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Visible keyboard focus */
+header a:focus-visible,
+header button:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pane-in { animation: none; }
+  header *, .peg-cta { transition: none !important; }
+}
