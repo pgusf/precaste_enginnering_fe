@@ -318,7 +318,7 @@ export default function SiteHeader() {
           >
             {!logoError ? (
               <img
-                src={`${process.env.PUBLIC_URL || ""}/peg_logo.png`}
+                src={`${process.env.PUBLIC_URL || ""}/usf_logo.png`}
                 alt="PEG - Precast Engineering Group"
                 onError={() => setLogoError(true)}
                 className="h-[40px] sm:h-[46px] lg:h-[48px] xl:h-[52px] w-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[195px] xl:max-w-[215px] object-contain flex-shrink-0"
@@ -392,12 +392,12 @@ export default function SiteHeader() {
 
           {/* RIGHT ACTIONS */}
           <div className="peg-header-actions hidden items-center gap-2.5 lg:gap-3 xl:gap-4 lg:flex flex-none">
-            {/* <Link
+            <Link
               to="/products/underground/manholes"
               className="peg-cta whitespace-nowrap rounded-md px-3 py-2 xl:px-4 xl:py-2.5 text-[11px] xl:text-[12px] font-extrabold uppercase tracking-wider text-white shadow-sm"
             >
               ACCESS VAULT
-            </Link> */}
+            </Link>
 
             {/* SECOND LOGO (shown on laptop/desktop screens where space permits) */}
             <span
@@ -405,7 +405,7 @@ export default function SiteHeader() {
               aria-hidden="true"
             />
 
-            <Link
+            {/* <Link
               to="/"
               className="peg-logo-secondary hidden xl:flex flex-none items-center"
               title="Precast Drawings - Advanced Specs"
@@ -427,7 +427,7 @@ export default function SiteHeader() {
                   </b>
                 </span>
               )}
-            </Link>
+            </Link> */}
           </div>
 
           {/* MOBILE MENU TOGGLE BUTTON */}
